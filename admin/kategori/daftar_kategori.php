@@ -22,6 +22,7 @@
                 <li>
                     <a href="../berita/daftar_berita.php">Berita</a>
                     <a href="../kategori/daftar_kategori.php">Kategori</a>
+                    <a href="../komentar/daftar_komentar.php">Komentar</a>
                     <a href="../logout.php">Logout</a>
                 </li>
             </ul>

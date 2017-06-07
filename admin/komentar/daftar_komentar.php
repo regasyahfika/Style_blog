@@ -32,33 +32,29 @@
 <div id="dua">
     <div id="dua_con">
         <div id="dua_ab">
-			<h2>Daftar Biodata</h2>
-		    <p>[ <a href="tambah_berita.php">Tambah Data</a> ] </p>
-			<table width="80%" border="1">
+			<h2>Daftar Komentar</h2>
+			<table width="650px" border="1">
 		        <tr style="background:#ccc">
-		            <th width="5%">ID</th>
-		            <th width="25%">Judul</th>
-		            <th width="20%">Isi</th>
-		            <th width="10%">Tanggal</th>
-		            <th width="20%">Gambar</th>
-		            <th>Aksi</th>
+		            <th width="10%">ID</th>
+		            <th width="40%">Nama</th>
+		            <th width="20%">Email</th>
+		            <th width="20%">No Hp</th>
+		            <th width="20%">Komentar</th>
+		            <th width="20%">Aksi</th>
 		        </tr>
 		        <?php
 		        $no = 1; 
-		        $query = mysqli_query($koneksi, "SELECT * FROM berita");
+		        $query = mysqli_query($koneksi, "SELECT * FROM komentar");
 		        while ($data = mysqli_fetch_array($query)):    
 				?>
 				<tr>
 					<td align="center"><?php echo $no ?></td>
-					<td><?php echo $data['judul_berita']; ?></td>
-					<td><?php echo $data['isi_berita']; ?></td>
-					<td><?php echo $data['tanggal']; ?></td>
-					<td><img src="../asset/images/<?php echo $data['gambar']; ?>" width="100px" height="70px" alt=""></td>
+					<td><?php echo $data['nama']; ?></td>
+					<td><?php echo $data['email']; ?></td>
+					<td><?php echo $data['telp']; ?></td>
+					<td><?php echo $data['komen']; ?></td>
 					<td>
-						<a href="edit_berita.php?id=<?php echo $data['id']; ?>">
-						Ubah
-						</a>
-						<a href="hapus_berita.php?id=<?php echo $data['id']; ?>">
+						<a href="hapus_komentar.php?id=<?php echo $data['id']; ?>">
 						Hapus
 						</a>
 					</td>
